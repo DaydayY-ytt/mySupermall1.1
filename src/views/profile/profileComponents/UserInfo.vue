@@ -17,7 +17,7 @@
         </div>
       <!--登录按钮-->
         <div class="login">
-          <button>登录</button>
+          <button @click="btnClick">登录</button>
         </div>
       </div>
     </div>
@@ -26,7 +26,12 @@
 
 <script>
   export default {
-    name: "UserInfo"
+    name: "UserInfo",
+    methods:{
+      btnClick(){
+        this.$toast.show('我们暂时还登录不了哦');
+      }
+    }
   }
 </script>
 
@@ -60,6 +65,7 @@
     border-bottom: 1px solid var(--color-text);
     outline: none;
     height: 20px;
+    margin-top:20px;
   }
   .input-area .login{
     display: block;
