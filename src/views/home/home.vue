@@ -1,6 +1,6 @@
 <template>
   <div id="home-wrapper">
-    <nav-bar class="home-nav"><div slot="center" >购物街</div></nav-bar>
+    <nav-bar class="home-nav"><div slot="center" >大王的商城</div></nav-bar>
     <!--better-scroll框架底层使用的是css的traslateY，所以使用position:fixed定位也会被移动-->
     <tab-control :tabItem="['流行','新款','精选']"
                  @tabIsClicked="tabIsClicked"

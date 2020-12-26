@@ -157,7 +157,7 @@
           product.iid = this.iid;
           this.addToCart(product).
           //Toast相关操作
-          then(res=>this.$toast.show(res,1500));
+          then(res=>this.$toast.show(res));
         }
       }
     }

@@ -24,7 +24,7 @@
         }
       },
       methods:{
-        show(res,maintain = 2000){
+        show(res,maintain = 500){
           this.message =res;
           this.isShow = true;
           setTimeout(()=>{

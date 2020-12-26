@@ -2,9 +2,10 @@
     <div class="shop-car-list">
       <scroll class="content" ref="scroll">
         <div v-show="product.length===0" class="nothing">购物车里空空如也哦~~</div>
-        <shop-car-item v-for="item in product"
+        <shop-car-item v-for="(item,index) in product"
                        :product="item"
-                       class="shop-car-item"/>
+                       class="shop-car-item"
+                       :key="index"/>
       </scroll>
     </div>
 </template>

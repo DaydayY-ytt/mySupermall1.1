@@ -5,7 +5,7 @@
       <span>全选</span>
     </div>
     <div class="total-price">合计：<span>￥{{totalPrice}}</span></div>
-    <div class="buy-product">去结算({{checkedProductLength}})</div>
+    <div class="buy-product" @click="buyClick">去结算({{checkedProductLength}})</div>
   </div>
 
 </template>
@@ -45,7 +45,10 @@
             //未全选中则点击变选中
             this.product.forEach(item => item.checked=true);
           }
-        }
+        },
+      buyClick(){
+        this.$toast.show('买不了嘻嘻~');
+      }
       }
     }
 </script>
@@ -85,10 +88,10 @@
   }
   .bottom-menu .total-price span{
     font-size: 12px;
-    color: orangered;
+    color: var(--color-tint);
   }
   .bottom-menu .buy-product{
-    background-color: orangered;
+    background-color: var(--color-tint);
     color: #fff;
     width: 100px;
     height: 44px;
